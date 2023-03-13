@@ -1,0 +1,994 @@
+/* 导航栏部分 */
+
+.Banner {
+	position: absolute;
+	height: 72px;
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+	z-index: 9999;
+	opacity: 1;
+	transition: 0.5s;
+}
+
+.w {
+	width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	height: 72px;
+	z-index: 10;
+}
+
+/* .Banner:has(.menu:hover) {
+	z-index: 9;
+	background-color: white;
+	width: 100%;
+	height: 500px;
+	color: black !important;
+}
+
+.menu:hover a {
+	color: black;
+}
+
+.menu:hover+.lan a {
+	color: black;
+}
+
+.w:has(.menu:hover) .logo {
+	color: black;
+}
+
+ */
+
+.logo {
+	position: absolute;
+	width: 175px;
+	height: 100%;
+	line-height: 72px;
+	color: white;
+	cursor: pointer;
+}
+
+
+
+.menu {
+	position: absolute;
+	right: 100px;
+	height: 100%;
+	width: auto;
+	z-index: 90;
+}
+
+
+.lan {
+	position: absolute;
+	display: inline-block;
+	line-height: 72px;
+	right: 0px;
+}
+
+.lan a {
+	font-size: 16px;
+	color: #fff;
+	font-family: "PingFangSC-Regular";
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+.menu li {
+
+	line-height: 72px;
+	display: inline-block;
+	margin-right: 70px;
+
+}
+
+.menu a {
+	font-size: 16px;
+	color: #fff;
+	font-weight: bold;
+	opacity: 0.95;
+}
+
+.Banner:has(.menu:hover){
+	z-index: 9;
+	background-color: white;
+	width: 100%;
+	height: 500px;
+	color: black !important;
+  }
+  .menu:hover a{
+	color: black;
+  }
+  .menu:hover + .lan a{
+	color: black;
+  }
+  .w:has(.menu:hover) .logo{
+	color: #0052D9;
+  }
+.caiDan{
+	display:none;
+}
+.caiDan:has(.jianJie:hover){
+	display: block;
+}
+
+
+/* 头部，轮播图部分 */
+
+#head {
+	width: 100%;
+	height: 720px;
+	background-color: #2B2E2E;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	top: 0px;
+}
+
+#head>img {
+	height: 720px;
+	width: 100%;
+
+}
+
+#headturnlist {
+	width: 8538px;
+	height: 720px;
+}
+
+#head::before {
+	width: 100%;
+	height: 100%;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 8;
+}
+
+#headturnlist img {
+	width: 1423px;
+	height: 720px;
+
+}
+
+#headturnlist li {
+	float: left;
+
+}
+
+
+
+
+/* 底部，轮播图部分 */
+.foot {
+	width: 100%;
+	height: 50%;
+	background-color: #2B2E2E;
+	border: 2px solid #999;
+	overflow: hidden;
+
+}
+
+#footturnlist {
+	width: 100%;
+	height: 100%;
+}
+
+
+#footturnlist li {
+	width: 100%;
+	float: left;
+
+}
+
+#footturnlist li img{
+	width: 100%;
+	object-fit: cover;
+}
+
+
+
+/* 中间部分，共四排，可缩放的部分 */
+.bigbackground {
+	width: 100%;
+	height: 2325px;
+	background-color: ghostwhite;
+	display: flex;
+	justify-content: center;
+
+}
+
+.bigbackground h3 {
+	font-size: 24px;
+	line-height: 1.4em;
+	margin: 35px 0px;
+	padding: 30px;
+	font-weight: normal;
+}
+
+.colorTowhite h3 {
+	color: #FFF;
+	cursor: pointer;
+}
+
+.colorTowhite p {
+	color: #FFF;
+}
+
+.bigbackground p {
+	font-size: 16px;
+	line-height: 1.5em;
+	margin: -65px 0px;
+	padding: 30px;
+	font-weight: normal;
+}
+
+.tagline {
+	width: 116px;
+	height: 30px;
+	position: absolute;
+	margin: 15px 0px;
+	font-size: 16px;
+	font-family: fantasy;
+	font-style: italic;
+	color: #0052D9;
+	border-bottom: 1px solid #0052D9;
+	border-top: 1px solid #0052D9;
+	border-right: 1px solid #0052D9;
+}
+
+.colorTowhite .tagline {
+	width: 116px;
+	height: 30px;
+	position: absolute;
+	margin: 15px 0px;
+	font-size: 16px;
+	font-family: fantasy;
+	font-style: italic;
+	color: #ffffff;
+	border-bottom: 1px solid #ffffff;
+	border-top: 1px solid #ffffff;
+	border-right: 1px solid #ffffff;
+}
+
+.bigbackground>div {
+	border-top: 3px solid white;
+	position: relative;
+	top: -100px;
+	width: 1200px;
+	height: 100%;
+	z-index: 999;
+}
+
+/* 最新动态   标题 */
+.bigbackground h4 {
+	/* color: #0052D9;
+	font-size: 24px;
+	line-height: 1.5em;
+	margin: 12px 0px;
+	padding: 0px;
+	font-weight: normal; */
+	font-size: 28px;
+	font-weight: 500;
+	font-family: TencentSansW7CN;
+	color: #FFF;
+	margin-bottom: 12px;
+}
+
+/* .bigbackground {
+	font-size: 24px;
+	line-height: 1.4em;
+	margin: 12px 0px;
+	padding: 0px;
+	font-weight: normal;
+} */
+
+
+
+/* 每个图片加个hidden盒子，防止缩放时图片溢出 */
+.hidden {
+	width: 404.4px;
+	height: 255.4px;
+	overflow: hidden;
+}
+
+.hidden2 {
+	width: 373.8px;
+	height: 249.2px;
+	overflow: hidden;
+}
+
+
+/* 第一排 */
+.tech {
+	position: relative;
+	width: 771.49px;
+	height: 603px;
+	background-color: aqua;
+	display: inline-block;
+	overflow: hidden;
+}
+
+/* 设置鼠标移入时，图片位置上移 */
+.upPx:hover {
+	transform: translateY(-10px);
+	transition: .5s;
+}
+
+.tech img {
+	width: 771.49px;
+	height: 514.39px;
+	position: absolute;
+	transform: scale(1.0);
+	transition: all 0.6s;
+}
+
+.tech img:hover {
+	transform: scale(1.1);
+}
+
+.techword {
+	width: 100%;
+	height: 256.04px;
+	background-color: white;
+	top: 347px;
+	position: absolute;
+}
+
+.help {
+	width: 404.4px;
+	height: 599px;
+	display: inline-block;
+}
+
+.help img {
+	width: 404.4px;
+	height: 255.4px;
+	transform: scale(1.0);
+	transition: all 0.6s;
+}
+
+.help img:hover {
+	transform: scale(1.1);
+}
+
+.helpword {
+	width: 100%;
+	height: 343.6px;
+	background-color: rgb(0, 169, 206);
+}
+
+
+
+/* 第二排 */
+.future {
+	width: 373.8px;
+	height: 599px;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+}
+
+.future img {
+	width: 373.8px;
+	height: 249.2px;
+	transform: scale(1.0);
+	transition: all 0.6s;
+}
+
+.future img:hover {
+	transform: scale(1.1);
+}
+
+.futureword {
+	width: 100%;
+	height: 343.6px;
+	background-color: rgb(0, 82, 217);
+}
+
+.smart {
+	width: 373.8px;
+	height: 599px;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+}
+
+.smart img {
+	width: 373.8px;
+	height: 249.2px;
+	transform: scale(1.0);
+	transition: all 0.6s;
+}
+
+.smart img:hover {
+	transform: scale(1.1);
+}
+
+.smartword {
+	width: 100%;
+	height: 343.6px;
+	background-color: white;
+}
+
+.pay {
+	width: 404.4px;
+	height: 599px;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+}
+
+.pay img {
+	width: 404.4px;
+	height: 255.4px;
+	transform: scale(1.0);
+	transition: all 0.6s;
+}
+
+.pay img:hover {
+	transform: scale(1.1);
+}
+
+.payword {
+	width: 100%;
+	height: 343.6px;
+	background-color: lightgray;
+}
+
+/* 第三排 */
+.women {
+	position: relative;
+	width: 771.49px;
+	height: 603px;
+	background-color: aqua;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.women img {
+	width: 100%;
+	height: 514.39px;
+	position: absolute;
+	transform: scale(1.0);
+	transition: all 0.6s;
+}
+
+.women img:hover {
+	transform: scale(1.1);
+}
+
+.womenword {
+	width: 100%;
+	height: 256.04px;
+	background-color: white;
+	top: 347px;
+	position: absolute;
+}
+
+.trend {
+	width: 404.4px;
+	height: 599px;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+}
+
+.trend img {
+	width: 404.4px;
+	height: 255.4px;
+	transform: scale(1.0);
+	transition: all 0.6s;
+}
+
+.trend img:hover {
+	transform: scale(1.1);
+}
+
+.trendword {
+	width: 100%;
+	height: 343.6px;
+	background-color: rgb(0, 82, 217);
+}
+
+.goal {
+	position: relative;
+	width: 771.49px;
+	height: 314px;
+	background-color: aqua;
+	display: inline-block;
+	overflow: hidden;
+	z-index: 10;
+}
+/* 第四排 */
+.goal::before {
+	width: 100%;
+	height: 100%;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 8;
+}
+
+.goal img {
+	z-index: 7;
+	width: 771.49px;
+	height: 314px;
+	position: absolute;
+	transform: scale(1.0);
+	transition: all 0.6s;
+}
+
+.goal:hover img {
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
+.goal:hover {
+	transform: translateY(-5px);
+	cursor: pointer;
+}
+
+.goalword {
+	position: absolute;
+	z-index: 9999;
+}
+
+.videopart {
+	width: 404.4px;
+	height: 314px;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+}
+
+.videopart:hover video {
+	transform: scale(1.1);
+}
+
+#video1 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: 0.8s;
+	top: 0px;
+	left: 0px;
+	object-fit: cover;
+}
+
+
+/* .year {
+	position: absolute;
+	color: white;
+	z-index: 2;
+	margin: 110px auto;
+} */
+
+/* 中间缩放图下另起一个盒子threep, 在其中放一个div，再放一个section*/
+.threep {
+	width: 100%;
+	height: 374.37px;
+	background-color: ghostwhite;
+	display: flex;
+	justify-content: center;
+}
+
+.threep>div {
+	position: relative;
+	width: 1200px;
+	height: 100%;
+}
+
+.company {
+	position: relative;
+	width: 30%;
+	height: 230.37px;
+	/* display: inline-block; */
+	overflow: hidden;
+	z-index: 10;
+}
+.company:hover::before{
+	display: block;
+	width: 100%;
+	height: 100%;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 85, 255, 0.5);
+	z-index: 8;
+}
+.company img {
+	width: 383.95px;
+	height: 230.37px;
+	transform: scale(1.0);
+	transition: all 0.6s;
+	z-index: 7;
+}
+
+.company:hover img{
+	transform: scale(1.1);
+}
+
+.culture {
+	position: relative;
+	width: 30%;
+	height: 230.37px;
+	/* display: inline-block; */
+	overflow: hidden;
+}
+.culture:hover::before{
+	display: block;
+	width: 100%;
+	height: 100%;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 85, 255, 0.5);
+	z-index: 8;
+}
+.culture img {
+
+	width: 383.95px;
+	height: 230.37px;
+	transform: scale(1.0);
+	transition: all 0.6s;
+	z-index: 7;
+}
+
+.culture:hover img {
+	transform: scale(1.1);
+}
+
+.place {
+	position: relative;
+	width: 30%;
+	height: 230.37px;
+	/* display: inline-block; */
+	overflow: hidden;
+}
+.place:hover::before{
+	display: block;
+	width: 100%;
+	height: 100%;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 85, 255, 0.5);
+	z-index: 8;
+}
+.place img {
+
+	width: 383.95px;
+	height: 230.37px;
+	transform: scale(1.0);
+	transition: all 0.6s;
+	z-index: 7;
+}
+
+.place:hover img{
+	transform: scale(1.1);
+}
+
+#section h2 {
+	position: absolute;
+	/* 如果给图片开启绝对定位,会使图片放大后溢出
+	所以只给文字设置绝对定位，再把位置定死*/
+	top: 90px;
+	left: 115px;
+	color: white;
+	font-size: 32px;
+	font-style: oblique;
+	font-weight: normal;
+	z-index: 100;
+}
+.darkbg {
+	width: 100%;
+	height: 630.31px;
+	background-color: #1B1F25;
+}
+
+.pic1 {
+	width: 400px;
+	height: 400px;
+	padding-left: 240px;
+	margin-left: -160px;
+	float: left;
+	transform: skew(-50deg, 0deg);
+	overflow: hidden;
+}
+
+.pic1 img {
+	width: 400px;
+	height: 400px;
+	transform: skew(50deg, 0deg);
+}
+
+/* 对中间所有缩放图做个flex布局 */
+#partone,
+#parttwo,
+#partthree,
+#partforth,
+#section {
+	width: 100%;
+	/* height: 600px; */
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.footer {
+	width: 100%;
+	height: 480px;
+	background: #fbfbfb;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* 使用margin没有居中，使用flex */
+.footer-center {
+	width: 1200px;
+	height: 480px;
+	position: relative;
+	bottom: 51px;
+	left: 0px;
+}
+
+/* 
+ 底部大字*/
+.footer-titile {
+	display: block;
+	font-size: 20px;
+	color: #5f6464;
+	font-weight: normal;
+	margin-bottom: 30px;
+}
+
+/* 关注栏 小图标部分 */
+/* .focusList {
+	display: block;
+} */
+.focus-us .focusList ul {
+	display: block;
+	/* float: left;
+	margin-right: 28px; */
+}
+
+.wechat:hover +img {
+	/*  鼠标经过 显示的内容 */
+	display: block;
+	/* 转换成块级元素 */
+}
+/* .weibo:hover +img {
+	display: block;
+} */
+.wechatcode {
+	width: 176px;
+	height: 176px;
+	position: absolute;
+	/* 要插入的图片绝对定位 不是标准流 */
+	left: 110px;
+	/* 以大盒子为准对齐 */
+	top: -100px;
+	display: none;
+}
+
+.weixin {
+	display: block;
+	height: 28px;
+	width: 28px;
+	background-image:url("../imges/icon_wechat.png") ;
+	background-size: 100% 100%;
+	position: absolute;
+	top: 75px;
+	left: 120px;
+	/* transition:background 0.2s ease-in-out; */
+}
+
+.weixinHover {
+	background-image:url("../imges/icon_wechat_hover.png") ;
+}
+.weiboHover {
+	background-image:url("../imges/icon_weibo_hover.png") ;
+}
+
+.weiboBtn {
+	display: block;
+	position: absolute;
+	height: 28px;
+	width: 28px;
+	top: 75px;
+	left: 180px;
+	background: url(../imges/icon_weibo.png) no-repeat center;
+	background-size: 100% 100%;
+}
+
+.twitterBtn {
+	display: block;
+	position: absolute;
+	height: 28px;
+	width: 28px;
+	top: 75px;
+	left: 240px;
+	background: url(../imges/icon_twitter.png) no-repeat center;
+	background-size: 100% 100%;
+}
+
+.inBtn {
+	display: block;
+	position: absolute;
+	height: 28px;
+	width: 28px;
+	top: 75px;`
+	left: 300px;
+	background: url(../imges/icon_in.png) no-repeat center;
+	background-size: 100% 100%;
+}
+
+.focus-us {
+	display: block;
+	height: 50px;
+	width: 100%;
+	border-bottom: 0.1px solid #999;
+	padding-top: 70px;
+	margin-bottom: 40px;
+	box-sizing: content-box;
+}
+
+.join-us,
+.contact-us,
+.law {
+	float: left;
+	width: 216px;
+	display: inline-block;
+}
+
+.footer-logo {
+	display: block;
+	height: 28px;
+	width: 212px;
+	position: absolute;
+	right: 75px;
+	top: 50%;
+	margin-top: -21px;
+}
+
+.footer-logo img {
+	width: 100%;
+}
+
+.shengming {
+	width: 100%;
+	height: 54px;
+	display: block;
+	width: 100%;
+	position: absolute;
+	bottom: 10px;
+	left: 0px;
+}
+
+
+/* 最下面小字声明部分，字体样式的设置 */
+
+.footer-center ul li a {
+	display: inline-block;
+	font-size: 16px;
+	color: #5f6464;
+	font-weight: normal;
+	margin-bottom: 18px;
+}
+
+.shengming .links li a {
+	font-size: 14px;
+	color: #5f6464;
+	margin-bottom: 0px;
+	float: left;
+	margin-right: 25px;
+}
+
+.copyright {
+	font-size: 14px;
+	color: #5f6464;
+	float: left;
+	width: 100%;
+	margin-top: 12px
+}
+
+/* 向上按钮 */
+.back-top-btn {
+	bottom: 40px;
+	display: block;
+	position: fixed;
+	right: 40px;
+	width: 60px;
+	height: 60px;
+	background-color: #fff;
+	border-radius: 1px solid #0052D9;
+	padding: 0;
+	transition: 3s;
+
+}
+
+
+/* 轮播图的一些设置 */
+#list {
+	list-style: none;
+	position: absolute;
+	bottom: -580px;
+	left: 1105px;
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	z-index: 999;
+}
+
+#list li {
+	float: left;
+	width: 10px;
+	height: 10px;
+	line-height: 20px;
+	text-align: center;
+	background-color: #fff;
+	margin-right: 10px;
+	cursor: pointer;
+	
+}
+
+.chooosebtn {
+	width: 50px;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .2);
+	color: white;
+	font-size: 30px;
+	line-height: 534px;
+	text-align: center;
+	display: none;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+}
+
+#left {
+	left: 0;
+}
+
+#right {
+	right: 0;
+}
+
+#pic {
+	cursor: pointer;
+	width: 800px;
+	height: 534px;
+	object-fit: cover;
+}
+
+#btnhead {
+	position: absolute;
+	width: 1200px;
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* 将梯形图居中 */
+.tixing {
+	width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+}
+.bigbackground img{
+	object-fit: cover;
+}
